@@ -15,7 +15,7 @@ public class LandingScreen {
     private final UIElement groceries =
             E(byAndroidUIAutomator("textContains(\"OurGroceries\")"));
     private final UIElement shoppingListTitle =
-            E(byAndroidUIAutomator("textContains(\"SHOPPING LISTS\")"));
+            E(byAndroidUIAutomator("textContains(\"SHOPPING LIST\")"));
     private final UIElement recipesTitle =
             E(byAndroidUIAutomator("textContains(\"RECIPES\")"));
     private final UIElement addRecipe =
