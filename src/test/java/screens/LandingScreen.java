@@ -6,6 +6,8 @@ import static testUI.Utils.By.byAndroidUIAutomator;
 import static testUI.Utils.By.byId;
 import static testUI.elements.TestUI.E;
 
+
+
 public class LandingScreen {
     // Elements
     private final UIElement shoppingListInput =
@@ -42,7 +44,7 @@ public class LandingScreen {
     }
 
     public void clickOnAddList() {
-        addListButton.shouldHave().attribute("text").equalTo("ADD LISTS");
+        addListButton.shouldHave().attribute("text").equalTo("ADD LIST"); // Changed from ADD LISTS to ADD LIST
         addListButton.click();
     }
 
@@ -55,6 +57,7 @@ public class LandingScreen {
         E(byAndroidUIAutomator("text(\"" +list+"\")")).waitFor(5).untilIsVisible().click();
     }
 
+    //Method to check if the list was deleted correctly
     public void checkNoList(String arg) {
         UIElement element = E(byAndroidUIAutomator("textContains(\"" + arg + "\")"));
         element.waitFor(5).untilNotVisible();
