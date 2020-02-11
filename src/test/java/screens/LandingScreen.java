@@ -15,6 +15,10 @@ public class LandingScreen {
 
 
     // Methods
+    public void checkLandingScreen() {
+
+    }
+
     public void clickAddShoppingList() {
         shoppingListInput.click();
     }
