@@ -1,8 +1,8 @@
 package stepDefinitions;
 
+import cucumber.api.java.Before;
 import io.netty.handler.logging.LogLevel;
-import org.junit.Before;
-import sun.security.krb5.Config;
+
 import testUI.Configuration;
 
 import static testUI.UIOpen.open;
