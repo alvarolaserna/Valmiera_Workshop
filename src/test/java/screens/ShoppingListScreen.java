@@ -4,7 +4,7 @@ import testUI.elements.UIElement;
 
 import static testUI.Utils.By.*;
 import static testUI.elements.TestUI.E;
-
+//ShoppingList ekrāns - visas metodes, kuras tiek izpildītas šajā logā
 public class ShoppingListScreen {
     // Elements
     private UIElement settingsButton = E(byAccesibilityId("More options"));

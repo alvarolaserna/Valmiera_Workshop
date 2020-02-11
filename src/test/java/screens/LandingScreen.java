@@ -1,7 +1,7 @@
 package screens;
 
 import testUI.elements.UIElement;
-
+//galvenais ekrāns
 import static testUI.Utils.By.byAndroidUIAutomator;
 import static testUI.Utils.By.byId;
 import static testUI.elements.TestUI.E;
