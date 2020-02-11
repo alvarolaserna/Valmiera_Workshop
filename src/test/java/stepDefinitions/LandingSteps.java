@@ -10,11 +10,13 @@ import testUI.Configuration;
 import static testUI.UIOpen.open;
 import static testUI.Utils.AppiumHelps.sleep;
 
+// Hello from Sandis Kaskurs
 public class LandingSteps {
     private LandingScreen landingScreen = new LandingScreen();
 
     @Given("I open the application")
     public void iOpenTheApplication() {
+        Configuration.useAllure = true;
         landingScreen.checkLandingScreen("OurGroceries", "RECIPES", "SHOPPING LIST");
     }
 

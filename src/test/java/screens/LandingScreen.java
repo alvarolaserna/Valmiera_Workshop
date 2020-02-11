@@ -42,7 +42,7 @@ public class LandingScreen {
     }
 
     public void clickOnAddList() {
-        addListButton.shouldHave().attribute("text").equalTo("ADD LISTS");
+        addListButton.shouldHave().attribute("text").equalTo("ADD LIST");
         addListButton.click();
     }
 

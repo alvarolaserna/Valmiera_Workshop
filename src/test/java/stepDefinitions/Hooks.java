@@ -14,5 +14,6 @@ public class Hooks {
         Configuration.testUILogLevel = LogLevel.DEBUG;
         Configuration.androidAppPath = "src/test/resources/groceries-app.apk";
         open();
+        Configuration.useAllure = true;
     }
 }

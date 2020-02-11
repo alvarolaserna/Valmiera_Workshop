@@ -8,8 +8,8 @@ import static testUI.elements.TestUI.E;
 public class ShoppingListScreen {
     // Elements
     private UIElement settingsButton = E(byAccesibilityId("More options"));
-    private UIElement deleteOption = E(byAndroidUIAutomator("text(\"Delete\")"));
-    private UIElement confirmDelete = E(byId("\tandroid:id/button1"));
+    private UIElement deleteOption = E(byAndroidUIAutomator("text(\"Delete list\")"));
+    private UIElement confirmDelete = E(byId("android:id/button1"));
     private UIElement backArrow = E(byAccesibilityId("Navigate up"));
     private UIElement barCode = E(byId("menu.ScanBarcode"));
     private UIElement plusButton = E(byId("menu.AddItem"));
