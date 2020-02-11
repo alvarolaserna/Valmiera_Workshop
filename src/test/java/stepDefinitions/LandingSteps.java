@@ -15,10 +15,7 @@ public class LandingSteps {
 
     @Given("I open the application")
     public void iOpenTheApplication() {
-        Configuration.useAllure = true;
-        Configuration.automationType = Configuration.ANDROID_PLATFORM;
-        Configuration.androidAppPath = "src/test/resources/groceries-app.apk";
-        open();
+        landingScreen.checkLandingScreen("OurGHroceries", "RECIPES", "SHOPPING LIST");
     }
 
     @When("I click on add shopping list")
@@ -40,5 +37,15 @@ public class LandingSteps {
     public void iSeeOnLandingScreen(String arg0) {
         landingScreen.checkNewList(arg0);
         sleep(3000);
+    }
+
+    @Then("I check there is no {string}")
+    public void iCheckThereIsNo(String arg0) {
+        landingScreen.checkNoList(arg0);
+    }
+
+    @When("I open the shopping list {string}")
+    public void iOpenTheShoppingList(String arg0) {
+        landingScreen.goToShoppingList(arg0);
     }
 }

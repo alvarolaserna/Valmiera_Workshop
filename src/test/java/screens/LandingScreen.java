@@ -12,11 +12,25 @@ public class LandingScreen {
             E(byAndroidUIAutomator("textContains(\"Add a shopping list\")"));
     private final UIElement inputShoppingList = E(byId("editText"));
     private final UIElement addListButton = E(byId("android:id/button1"));
+    private final UIElement groceries =
+            E(byAndroidUIAutomator("textContains(\"OurGroceries\")"));
+    private final UIElement shoppingListTitle =
+            E(byAndroidUIAutomator("textContains(\"SHOPPING LISTS\")"));
+    private final UIElement recipesTitle =
+            E(byAndroidUIAutomator("textContains(\"RECIPES\")"));
+    private final UIElement addRecipe =
+            E(byAndroidUIAutomator("textContains(\"Add a recipe...\")"));
 
 
     // Methods
-    public void checkLandingScreen() {
+    public LandingScreen checkLandingScreen(String... args) {
+        for (String arg : args) {
+            UIElement element =
+                    E(byAndroidUIAutomator("textContains(\"" + arg + "\")"));
+            element.waitFor(5).untilIsVisible();
+        }
 
+        return this;
     }
 
     public void clickAddShoppingList() {
@@ -35,5 +49,14 @@ public class LandingScreen {
     public void checkNewList(String arg) {
         UIElement element = E(byAndroidUIAutomator("textContains(\"" + arg + "\")"));
         element.waitFor(5).untilIsVisible();
+    }
+
+    public void goToShoppingList(String list) {
+        E(byAndroidUIAutomator("text(\"" +list+"\")")).waitFor(5).untilIsVisible().click();
+    }
+
+    public void checkNoList(String arg) {
+        UIElement element = E(byAndroidUIAutomator("textContains(\"" + arg + "\")"));
+        element.waitFor(5).untilNotVisible();
     }
 }
