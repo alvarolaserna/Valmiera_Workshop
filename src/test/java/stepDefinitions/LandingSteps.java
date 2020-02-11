@@ -15,7 +15,7 @@ public class LandingSteps {
 
     @Given("I open the application")
     public void iOpenTheApplication() {
-        landingScreen.checkLandingScreen("OurGHroceries", "RECIPES", "SHOPPING LIST");
+        landingScreen.checkLandingScreen("OurGroceries", "RECIPES", "SHOPPING LIST");
     }
 
     @When("I click on add shopping list")
